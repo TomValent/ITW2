@@ -12,6 +12,7 @@ navbar{
     overflow: hidden;
     color: white;
     font-weight: bold;
+    position: fixed;
 }
 
 navbar a{
@@ -22,13 +23,27 @@ navbar a{
     color: white;
 }
 
+navbar a:hover{
+    background-color: blue;
+}
+
 navbar a img{       /*obrazky v nav bare*/
     width: 30px;
     height: 30px;
 }
 
 #menu{
-    display: none;
+    position: fixed;
+	top: 55px;
+    left: 150px;
+	display: none;
+	z-index: 1;
+    background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(21, 110, 199);
+    border: solid 1px black;
+    border-radius: 5px;
 }
 
 body{
@@ -38,6 +53,18 @@ body{
 navbar div{
     float: left;
     padding: 16px;
+}
+
+.drop{
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	font-family: inherit;
+	margin: 0;
+    outline: none;
+	color: white;
+	background-color: inherit;
+    font-weight: bold;
 }
 
 .responsive{
@@ -85,10 +112,16 @@ navbar div{
 #about{
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 70%;
+    width: 100%;
     justify-content: center;
     margin: auto;
     text-align: center;
+    background-image: linear-gradient(rgb(21, 110, 199), lightskyblue);
+    display: flex;
+}
+
+#about_inner{
+    width: 70%;
 }
 
 #about .part1{
@@ -120,7 +153,7 @@ navbar div{
 }
 
 #about .part2 .photos img{
-    width: 28%;
+    width: 20%;
     padding: 10px;
     float: left;
 }
@@ -134,4 +167,28 @@ navbar div{
 #about introduction{
     height: 150px;
     float: left;
+}
+
+@media screen and (max-width: 550px){
+    #about .part1{
+        display: unset;
+    }
+    #about .part1 .introduction{
+        padding-bottom: 20px;
+        padding-right: 0;
+    }
+    #about .part1 img{
+        float: inherit;
+    }
+    #about .part2{
+        display: unset;
+    }
+    #about .part2 .contacts{
+        width: 70%;
+        padding: 30px;
+    }
+    #about .part2 img{
+        height: 50px;
+        width: 50px;
+    }
 }
