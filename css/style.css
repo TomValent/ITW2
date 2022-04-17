@@ -4,6 +4,12 @@
     scroll-behavior: smooth;
 }
 
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 navbar{
     width: 100%;
     height: 50px;
@@ -13,6 +19,7 @@ navbar{
     color: white;
     font-weight: bold;
     position: fixed;
+    border-bottom: solid 1px black;
 }
 
 navbar a{
@@ -34,7 +41,7 @@ navbar a img{       /*obrazky v nav bare*/
 
 #menu{
     position: fixed;
-	top: 55px;
+	top: 51px;
     left: 150px;
 	display: none;
 	z-index: 1;
@@ -46,8 +53,12 @@ navbar a img{       /*obrazky v nav bare*/
     border-radius: 5px;
 }
 
-body{
-    background-color:  rgb(21, 110, 199);
+#education:hover{
+    background-color: blue;
+}
+
+#menu a:hover{
+    border-radius: 5px;
 }
 
 navbar div{
@@ -116,7 +127,7 @@ navbar div{
     justify-content: center;
     margin: auto;
     text-align: center;
-    background-image: linear-gradient(rgb(21, 110, 199), lightskyblue);
+    background-image: linear-gradient(lightskyblue, rgb(21, 110, 199), lightskyblue);
     display: flex;
 }
 
@@ -169,7 +180,40 @@ navbar div{
     float: left;
 }
 
+#edu{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 700px;
+    background-color: lightskyblue;
+    display: block;
+}
+
+.school{
+    width: 75%;
+    height: 130px;
+    margin-left: 160px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgb(21, 110, 199);
+    border: solid 1px black;
+    border-radius: 5px;
+    overflow-y:scroll;
+}
+
+.school h2{
+    padding-bottom: 10px;
+}
+
+#home, #about, #school1, #school2, #school3, #skills, #work{
+    scroll-margin-top: 50px;
+}
+
 @media screen and (max-width: 550px){
+    #home{
+        color: white;
+    }
+    
     #about .part1{
         display: unset;
     }
@@ -190,5 +234,8 @@ navbar div{
     #about .part2 img{
         height: 50px;
         width: 50px;
+    }
+    .school{
+        margin-left: 35px;
     }
 }

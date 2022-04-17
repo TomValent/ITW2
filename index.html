@@ -17,7 +17,7 @@
                     <div id="menu">
                         <a href="#school1">School1</a>
                         <a href="#school2">School2</a>
-                        <a href="#school3">School3</a>
+                        <a href="#school3">School3</a>      <!--stojim si za tym ze to je spravne ale skace to inam nez ma-->
                     </div>
                 </div>
                 <a href="#skills">Skills</a>
@@ -58,6 +58,23 @@
                         </div>
                     </div>
                 </section>
+                <section id="edu">
+                    <h1>Education</h1>
+                    <div class="school">
+                        <h2 id="school1" name="school1">School 1</h2>
+                        Lorem, ipsum.
+                    </div>
+
+                    <div class="school">
+                        <h2 id="school2" name="school2">School 2</h2>
+                        Lorem, ipsum.
+                    </div>
+
+                    <div class="school">
+                        <h2 id="school3" name="school3">School 3</h2>
+                        Lorem, ipsum.
+                    </div>
+                </section>
             </div>
         </body>
         <footer>
@@ -68,10 +85,10 @@
         function menu()
         {
             var menu = document.getElementById("menu");
-            if(menu.style.display == "none")
-                menu.style.display = "unset";
-            else
+            if(menu.style.display == "unset")
                 menu.style.display = "none";
+            else
+                menu.style.display = "unset";
         }
         function responsiveMobile(){
             var screen = document.getElementById("respon");
@@ -86,6 +103,9 @@
                 screen.style.width = "100%";
             }
             document.getElementById("navbar").style.width = "100%"; 
+        }
+        function resetHref() {
+            location.hash = '';
         }
     </script>
 </html>
