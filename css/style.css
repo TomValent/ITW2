@@ -227,8 +227,12 @@ navbar div{
     height: 80px;
 }
 
-#home, #about, #school1, #school2, #school3, #skills, #work{
+#home, #about, #skills, #work{
     scroll-margin-top: 50px;
+}
+
+#school1, #school2, #school3{
+    scroll-margin-top: 70px;
 }
 
 #myWork{
@@ -264,6 +268,11 @@ footer{
     color: gray;
 }
 
+footer a{
+    text-decoration: none;
+    color: gray;
+}
+
 @media screen and (max-width: 560px){
     #home{
         color: white;
@@ -293,5 +302,8 @@ footer{
     .school{
         margin-left: 35px;
         overflow-y: scroll;
+    }
+    #school1, #school2, #school3{
+        scroll-margin-top: 100px;   /*does not react*/
     }
 }

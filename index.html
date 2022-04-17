@@ -16,9 +16,9 @@
                         Education
                     </button>
                     <div id="menu">
-                        <a href="#school1">School1</a>
-                        <a href="#school2">School2</a>
-                        <a href="#school3">School3</a>
+                        <a href="#school1" onclick="menuClicked()">School1</a>
+                        <a href="#school2" onclick="menuClicked()">School2</a>
+                        <a href="#school3" onclick="menuClicked()">School3</a>
                     </div>
                 </div>
                 <a href="#skills">Skills</a>
@@ -129,7 +129,7 @@
                 </section>
                 <footer>
                     <p>Author: Tomáš Valent (xvalen27)</p>
-                    <p>Email: xvalen27@stud.fit.vutbr.cz</p>
+                    <p>Email: <a href="mailto:xvalen27@stud.fit.vutbr.cz">xvalen27@stud.fit.vutbr.cz</a></p>
                 </footer>
             </div>
         </div>
@@ -143,12 +143,17 @@
             else
                 menu.style.display = "unset";
         }
+        function menuClicked()
+        {
+            var menu = document.getElementById("menu");
+            menu.style.display = "none";
+        }
         function responsiveMobile(){
             var screen = document.getElementById("respon");
             if (screen) {
-                screen.style.width = "535px";
+                screen.style.width = "537px";
             }
-            document.getElementById("navbar").style.width = "535px"; 
+            document.getElementById("navbar").style.width = "537px"; 
         }
         function responsivePC(){
             var screen = document.getElementById("respon");
