@@ -9,7 +9,7 @@ h1{
     text-align: center;
     margin-bottom: 20px;
 }
-
+/*navigacny bar*/
 navbar{
     width: 100%;
     height: 50px;
@@ -22,7 +22,7 @@ navbar{
     border-bottom: solid 1px black;
 }
 
-navbar a{
+navbar a{   /*text v navigacnom bare*/
     text-decoration: none;
     font-weight: bold;
     float: left;
@@ -39,11 +39,11 @@ navbar a img{       /*obrazky v nav bare*/
     height: 30px;
 }
 
-#menu{
+#menu{      /*menu ktore je defaultne skryte*/
     position: fixed;
 	top: 51px;
     left: 150px;
-	display: none;
+	display: none;  /* <- */
 	z-index: 1;
     background-color: #f9f9f9;
 	min-width: 160px;
@@ -63,7 +63,6 @@ navbar a img{       /*obrazky v nav bare*/
 
 navbar div{
     float: left;
-    padding: 16px;
 }
 
 .drop{
@@ -76,6 +75,7 @@ navbar div{
 	color: white;
 	background-color: inherit;
     font-weight: bold;
+    padding: 16px;
 }
 
 .responsive{
@@ -87,11 +87,13 @@ navbar div{
     padding: 8px;
 }
 
+/*obsah stranky*/
 #content{
     align-items: center;
     justify-content: center;
 }
 
+/*sekcia home*/
 #home{
     background-image: url("./../img/sky.jpg");
     background-repeat: no-repeat;
@@ -120,6 +122,7 @@ navbar div{
     margin-top: 15px;
 }
 
+/*sekcia about*/
 #about{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -175,6 +178,7 @@ navbar div{
     float: right;
 }
 
+/*sekcia education*/
 #edu{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -199,6 +203,7 @@ navbar div{
     padding-bottom: 10px;
 }
 
+/*sekcia skills*/
 #skills{
     width: 100%;
     height: 400px;
@@ -224,9 +229,12 @@ navbar div{
 
 .programming img{
     width: 15%;
+    margin-left: 15px;
+    margin-right: 15px;
     height: 80px;
 }
 
+/*upravenie scrollu kvoli navbaru*/
 #home, #about, #skills, #work{
     scroll-margin-top: 50px;
 }
@@ -235,6 +243,7 @@ navbar div{
     scroll-margin-top: 70px;
 }
 
+/*sekcia  my work*/
 #myWork{
     width: 100%;
     padding-top: 100px;
@@ -258,6 +267,7 @@ navbar div{
     padding: 15px;
 }
 
+/*footer stranky*/
 footer{
     width: 100%;
     height: 100%;
@@ -273,6 +283,7 @@ footer a{
     color: gray;
 }
 
+/*media query pre mobilnu verziu*/
 @media screen and (max-width: 560px){
     #home{
         color: white;
@@ -304,6 +315,7 @@ footer a{
         overflow-y: scroll;
     }
     #school1, #school2, #school3{
-        scroll-margin-top: 100px;   /*does not react*/
+        scroll-margin-top: 80px; /*css tento riadok ignoruje (rovnako aj ten scroll margin pretym)*/
+        margin-top: 40px;        /*toto je zan nahrada*/
     }
 }

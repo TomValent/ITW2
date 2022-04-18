@@ -7,15 +7,15 @@
         <title>ITW Projekt 2</title>
     </head>
     <body>
-        <div id="respon">
-            <navbar id="navbar">
+        <div id="respon">       <!--pomocny div na zmeny sirky-->
+            <navbar id="navbar">    <!--navigacny bar-->
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <div id="education">
+                <div id="education">        <!--button co vysuva a zasuva skryte menu-->
                     <button class="drop" onclick="menu()">
                         Education
                     </button>
-                    <div id="menu">
+                    <div id="menu">     <!--skryte menu-->
                         <a href="#school1" onclick="menuClicked()">School1</a>
                         <a href="#school2" onclick="menuClicked()">School2</a>
                         <a href="#school3" onclick="menuClicked()">School3</a>
@@ -28,7 +28,7 @@
                     <a id="mobile" onclick="responsiveMobile()" href="#"><img src="./img/mobile.png" alt="mobile"/></a>
                 </div>
             </navbar>
-            <div id="content">
+            <div id="content">          <!--cely obsah stranky rozdeleny na sekcie a footer-->
                 <section id="home">
                     <div class="wrap">
                         <img alt="photo" src="./img/randomPerson.png">
@@ -64,21 +64,19 @@
                 <section id="edu">
                     <h1>EDUCATION</h1>
                     <div class="school">
-                        <h2 id="school1" name="school1">School 1</h2>
+                        <h2 id="school1">School 1</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos odit vitae, distinctio praesentium rem iusto culpa similique eius eveniet deleniti magnam accusantium itaque veritatis fugiat ipsum. Laborum illum maxime nihil adipisci doloribus excepturi, pariatur optio placeat magni, officia laudantium aliquam praesentium, deleniti provident ipsum? Minima ullam sequi ea adipisci unde enim provident id ipsa facere omnis, ex dolores distinctio eos esse cumque sunt aperiam atque ducimus quas similique voluptas voluptatem pariatur. Officiis repellendus vitae similique asperiores culpa quod itaque deleniti laborum cupiditate quis, eveniet provident a debitis veniam praesentium unde illo consectetur eligendi rem porro reprehenderit neque nam velit. Porro, quae officiis! Asperiores quaerat magnam perferendis reiciendis est temporibus sed? Sequi, atque quas.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos odit vitae, distinctio praesentium rem iusto culpa similique eius eveniet deleniti magnam accusantium itaque veritatis fugiat ipsum. Laborum illum maxime nihil adipisci doloribus excepturi, pariatur optio placeat magni, officia laudantium aliquam praesentium, deleniti provident ipsum? Minima ullam sequi ea adipisci unde enim provident id ipsa facere omnis, ex dolores distinctio eos esse cumque sunt aperiam atque ducimus quas similique voluptas voluptatem pariatur. Officiis repellendus vitae similique asperiores culpa quod itaque deleniti laborum cupiditate quis, eveniet provident a debitis veniam praesentium unde illo consectetur eligendi rem porro reprehenderit neque nam velit. Porro, quae officiis! Asperiores quaerat magnam perferendis reiciendis est temporibus sed.
                         </p>
                     </div>
-
                     <div class="school">
-                        <h2 id="school2" name="school2">School 2</h2>
+                        <h2 id="school2">School 2</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam atque ab ullam nobis aliquid molestiae distinctio modi vero odio. Deserunt tempora voluptatibus placeat magnam delectus error earum commodi dicta reiciendis expedita, sunt soluta, ut, eum eius inventore perspiciatis quia dolores beatae aspernatur fugit consequuntur harum! Omnis eveniet possimus nemo, enim accusamus est harum voluptatibus excepturi asperiores dicta beatae nesciunt laudantium amet ad. Pariatur optio facilis ab architecto, ratione nemo fugiat dignissimos ut aperiam ex ullam voluptatem repellendus ad modi voluptatum qui enim eos quibusdam facere inventore quae neque necessitatibus culpa eaque. Nostrum id quas deserunt accusantium, tempore laudantium porro dolorum, dicta placeat aperiam.
                         </p>
                     </div>
-
                     <div class="school">
-                        <h2 id="school3" name="school3">School 3</h2>
+                        <h2 id="school3">School 3</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus natus optio porro nulla omnis magni dignissimos deleniti officiis, repellendus labore vero, iste, reprehenderit praesentium. Eaque dolore rerum nisi, quas, delectus explicabo iusto porro nam quaerat id iure, molestiae magnam molestias temporibus ipsam. Magni tenetur, rem optio aliquam consequatur sequi dolore?
                         </p>
@@ -135,27 +133,26 @@
         </div>
     </body>
     <script>
-        function menu()
-        {
+        function menu(){         //funkcia na zobrazenie a skrytie menu
             var menu = document.getElementById("menu");
             if(menu.style.display == "unset")
                 menu.style.display = "none";
             else
                 menu.style.display = "unset";
         }
-        function menuClicked()
-        {
+        function menuClicked(){  //po vkliknuti na nejaku moznost v menu sa menu schova
             var menu = document.getElementById("menu");
             menu.style.display = "none";
+            var edu = document.getElementById("edu");
         }
-        function responsiveMobile(){
+        function responsiveMobile(){        //zmensenie sirky pre mobilnu verziu
             var screen = document.getElementById("respon");
             if (screen) {
                 screen.style.width = "537px";
             }
             document.getElementById("navbar").style.width = "537px"; 
         }
-        function responsivePC(){
+        function responsivePC(){            //zvacsenie sirky pre mobilnu verziu
             var screen = document.getElementById("respon");
             if (screen) {
                 screen.style.width = "100%";
