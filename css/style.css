@@ -118,6 +118,11 @@ navbar div{
     width: 300px;
 }
 
+#home .wrap a{
+    text-decoration: none;
+    color: black;
+}
+
 #home .name, #home .desc{
     margin-top: 15px;
 }
@@ -286,6 +291,11 @@ footer a{
 /*media query pre mobilnu verziu*/
 @media screen and (max-width: 560px){
     #home{
+        color: white;
+    }
+
+    #home .wrap a{
+        text-decoration: none;
         color: white;
     }
 
