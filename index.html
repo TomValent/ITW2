@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="respon">       <!--pomocny div na zmeny sirky-->
-            <navbar id="navbar">    <!--navigacny bar-->
+            <nav id="navbar">    <!--navigacny bar-->
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <div id="education">        <!--button co vysuva a zasuva skryte menu-->
@@ -28,7 +28,7 @@
                     <a id="pc" onclick="responsivePC()" href="#"><img src="./img/pc.png" alt="pc"/></a>
                     <a id="mobile" onclick="responsiveMobile()" href="#"><img src="./img/mobile.png" alt="mobile"/></a>
                 </div>
-            </navbar>
+            </nav>
             <div id="content">          <!--cely obsah stranky rozdeleny na sekcie a footer-->
                 <section id="home">
                     <div class="wrap">
@@ -132,33 +132,33 @@
                 </footer>
             </div>
         </div>
-    </body>
-    <script>
-        function menu(){         //funkcia na zobrazenie a skrytie menu
-            var menu = document.getElementById("menu");
-            if(menu.style.display == "unset")
+        <script>
+            function menu(){         //funkcia na zobrazenie a skrytie menu
+                var menu = document.getElementById("menu");
+                if(menu.style.display == "unset")
+                    menu.style.display = "none";
+                else
+                    menu.style.display = "unset";
+            }
+            function menuClicked(){  //po vkliknuti na nejaku moznost v menu sa menu schova
+                var menu = document.getElementById("menu");
                 menu.style.display = "none";
-            else
-                menu.style.display = "unset";
-        }
-        function menuClicked(){  //po vkliknuti na nejaku moznost v menu sa menu schova
-            var menu = document.getElementById("menu");
-            menu.style.display = "none";
-            var edu = document.getElementById("edu");
-        }
-        function responsiveMobile(){        //zmensenie sirky pre mobilnu verziu
-            var screen = document.getElementById("respon");
-            if (screen) {
-                screen.style.width = "537px";
+                var edu = document.getElementById("edu");
             }
-            document.getElementById("navbar").style.width = "537px"; 
-        }
-        function responsivePC(){            //zvacsenie sirky pre mobilnu verziu
-            var screen = document.getElementById("respon");
-            if (screen) {
-                screen.style.width = "100%";
+            function responsiveMobile(){        //zmensenie sirky pre mobilnu verziu
+                var screen = document.getElementById("respon");
+                if (screen) {
+                    screen.style.width = "537px";
+                }
+                document.getElementById("navbar").style.width = "537px"; 
             }
-            document.getElementById("navbar").style.width = "100%"; 
-        }
-    </script>
+            function responsivePC(){            //zvacsenie sirky pre mobilnu verziu
+                var screen = document.getElementById("respon");
+                if (screen) {
+                    screen.style.width = "100%";
+                }
+                document.getElementById("navbar").style.width = "100%"; 
+            }
+        </script>
+    </body>
 </html>
